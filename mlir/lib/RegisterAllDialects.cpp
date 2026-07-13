@@ -73,6 +73,7 @@
 #include "mlir/Dialect/SCF/TransformOps/SCFTransformOps.h"
 #include "mlir/Dialect/SCF/Transforms/BufferDeallocationOpInterfaceImpl.h"
 #include "mlir/Dialect/SCF/Transforms/BufferizableOpInterfaceImpl.h"
+#include "mlir/Dialect/SMCF/IR/SMCFOps.h"
 #include "mlir/Dialect/SMT/IR/SMTDialect.h"
 #include "mlir/Dialect/SPIRV/IR/SPIRVDialect.h"
 #include "mlir/Dialect/Shape/IR/Shape.h"
@@ -145,6 +146,7 @@ void mlir::registerAllDialects(DialectRegistry &registry) {
                   ROCDL::ROCDLDialect,
                   scf::SCFDialect,
                   shape::ShapeDialect,
+                  smcf::SMCFDialect,
                   smt::SMTDialect,
                   sparse_tensor::SparseTensorDialect,
                   spirv::SPIRVDialect,
